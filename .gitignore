@@ -132,3 +132,5 @@ dmypy.json
 train_data_trend.npz
 
 trend.mpz.npz
+
+.idea/
