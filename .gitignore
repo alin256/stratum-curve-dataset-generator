@@ -134,3 +134,7 @@ train_data_trend.npz
 trend.mpz.npz
 
 .idea/
+
+deposition/
+
+*.nc
