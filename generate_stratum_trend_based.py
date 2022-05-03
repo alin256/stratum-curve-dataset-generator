@@ -7,6 +7,7 @@ import multiprocessing
 random.seed(51)
 
 delta_x = 10.
+scale_from_ft = 2.
 x_scaling = 3e-3
 
 # added some trend function
@@ -25,7 +26,7 @@ y_positions -= y_positions[0]
 
 np.savez('trend.mpz', x_pos=x_positions, y_pos=y_positions)
 
-plt.plot(x_positions, y_positions)
+plt.plot(x_positions / delta_x, y_positions)
 # plt.figure()
 # plt.plot(x_positions, y_dirivatives)
 # plt.show()
@@ -106,7 +107,7 @@ def plot_states_single(states_single):
     else:
         for state in states_single:
             ys.append(state.position)
-    plt.plot(x_positions, ys)
+    plt.plot(x_positions/delta_x, np.array(ys)*scale_from_ft)
 
 
 def plot_states(states):
@@ -126,8 +127,8 @@ def generate_one_trajectory(shape):
 
 if __name__ == "__main__":
 
-    num_realizations = 100000
-    plot_first_n = 100
+    num_realizations = 100
+    plot_first_n = 20
     all_states = np.zeros((num_realizations, len(x_positions), SubsurfaceState.numpy_len()))
     shape = all_states.shape
     # all_states = []
@@ -169,6 +170,9 @@ if __name__ == "__main__":
     np.savez('test_data_trend.npz', data=all_states)
 
     # plt.axis('equal')
+    plt.title('Examples of the generated SVD curves from the dataset')
+    plt.xlabel('Vertical section, ft')
+    plt.ylabel('Stratigraphic Vertical Depth, ft')
     plt.savefig('trajcetories.png')
     plt.show()
 
