@@ -79,7 +79,7 @@ This read-me file.
 ## Terms of reuse
 
 
-The dataset is distributed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licnse. The citing recomendations follow.
+The dataset is distributed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) licnse. The citing recomendations follow.
 
 
 ## How to Cite:
