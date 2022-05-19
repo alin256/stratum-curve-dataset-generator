@@ -3,7 +3,7 @@
 The generator code for realizations of stratigraphic curves generates curved and faulted geological stratigraphies. 
 Here is an example of generated curves:
 
-![100 stratum curves](https://github.com/alin256/stratum-curve-dataset-generator/blob/main/trajcetories.png)
+![100 stratum curves](https://github.com/alin256/stratum-curve-dataset-generator/blob/main/trajectories.png)
 
 ## How to Cite:
 
